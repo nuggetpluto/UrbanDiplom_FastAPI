@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOCKING HOTEL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(https://i.yapx.ru/XgCru.png);
+            font-family: "Uni Sans";
+            color: black;
+        }
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-text">
+        <h1>BOOCKING HOTEL</h1>
+        <p>Сервис по бронированию отелей</p>
+    </div>
+
+    <div class="container">
+        <div style='width: 1300px;
+        height: 80px;
+        border-radius: 50%/10%;
+        position: relative; background-color: #00515c; background-size: cover; background-position: center; display: flex; justify-content: space-between; align-items: center; padding: 25px;' class="header">
+            <div class="center">
+                <a href="{{ url_for('get_all_hotel') }}">ГЛАВНАЯ СТРАНИЦА</a>
+            </div>
+            <div style="width: 200px; display: flex; justify-content: space-around;" class="right">
+                <a href="{{ url_for('get_cart_page') }}">КОРЗИНА</a>
+                <a href="{{ url_for('get_login_page') }}">ПРОФИЛЬ</a>
+            </div>
+        </div>
+        <br>
+        <ul class="list-group">
+            <li class="list-group-item">ID Отеля: {{id}}</li>
+            <li class="list-group-item">Название: {{title}}</li>
+            <li class="list-group-item">Цена: {{price}} ₽</li>
+        </ul>
+    </div>
+</body>
+
+</html>
