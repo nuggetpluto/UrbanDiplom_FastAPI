@@ -6,7 +6,7 @@ class Customer(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     first_name: str
     second_name: str
-    phone: str  # Используйте str для номера телефона, чтобы избежать проблем с ведущими нулями
+    phone: str
     email: str
     password: str
     address: str
